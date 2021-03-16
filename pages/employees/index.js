@@ -153,7 +153,7 @@ export default function Home() {
           <Content>
             <PageHeader
               className="px-0"
-              title="Dashboard"
+              title="Employees (26)"
               // breadcrumb={{ routes }}
               subTitle="List Of Employees"
             />
@@ -164,20 +164,18 @@ export default function Home() {
               </Col>
               <Col></Col>
             </Row>
+            
+            <div className="grid grid-cols-4 gap-4">
+              <div className="rounded-lg bg-white p-1">
+                <div className="flex flex-col justify-center items-center bg-blue-50 rounded-xl p-5">
+                  <Avatar size="default" src="https://avatars.githubusercontent.com/u/499550?s=460&u=de41ec9325e8a92e281b96a1514a0fd1cd81ad4a&v=4" className="mr-3" />
+                  <span>Fathan Margono</span>
+                  <span>Web Developer</span>
+                  {/* <small>fathan@gmail.com</small> */}
+                </div>
+              </div>
 
-            <Row gutter={16} align="stretch">
-              <Col span={18}>
-                <Card className="rounded-lg">
-                  <Table dataSource={data} columns={columns} />
-                </Card>
-              </Col>
-              
-              <Col span={6}>
-                <Card className="rounded-lg">
-                  <div className="4xl">Activity</div>
-                </Card>
-              </Col>
-            </Row>
+            </div>
 
           </Content>
         </Layout>
