@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 // import 'antd/dist/antd.css'
 
 import { Input, Button, Table, Tag, Space, Col, Card, Divider, Dropdown, Layout, Menu, PageHeader, Row, Side } from 'antd'
-import { SearchOutlined, EditOutlined, NotificationOutlined, DesktopOutlined, DownOutlined, FileOutlined, MenuFoldOutlined, PieChartOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons';
+import { SearchOutlined, EditOutlined, SwapOutlined, NotificationOutlined, DesktopOutlined, DownOutlined, FileOutlined, MenuFoldOutlined, PieChartOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons';
 const { Header, Content, Footer, Sider } = Layout
 
 import Avatar from 'antd/lib/avatar/avatar'
@@ -166,14 +166,35 @@ export default function Home() {
             </Row>
             
             <div className="grid grid-cols-4 gap-4">
-              <div className="rounded-lg bg-white p-1">
-                <div className="flex flex-col justify-center items-center bg-blue-50 rounded-xl p-5">
-                  <Avatar size="default" src="https://avatars.githubusercontent.com/u/499550?s=460&u=de41ec9325e8a92e281b96a1514a0fd1cd81ad4a&v=4" className="mr-3" />
-                  <span>Fathan Margono</span>
-                  <span>Web Developer</span>
-                  {/* <small>fathan@gmail.com</small> */}
-                </div>
-              </div>
+              {
+                [1,2,3,4,5,6,7,8].map((val) => (
+                  <div key={val} className="rounded-lg bg-white p-1">
+                    <div className="flex flex-col justify-center items-center bg-green-50 rounded-xl px-5 py-6">
+                      <Avatar size="large" src="https://avatars.githubusercontent.com/u/499550?s=460&u=de41ec9325e8a92e281b96a1514a0fd1cd81ad4a&v=4" className="mb-2" />
+                      <span className="text-base font-semibold">Fathan Margono</span>
+                      <span className="text-sm font-medium">Web Developer</span>
+                      <Tag color="cyan" className="mt-1 rounded-lg">Fulltime</Tag>
+                    </div>
+                    
+                    <div className="py-6 flex justify-around items-center">
+                      <div className="flex flex-col justify-around items-center">
+                        <span className="text-xl font-semibold">1</span>
+                        <span className="text-sm text-gray-500">Sick</span>
+                      </div>
+                      
+                      <div className="flex flex-col justify-center items-center">
+                        <span className="text-xl font-semibold">2</span>
+                        <span className="text-sm text-gray-500">Absence</span>
+                      </div>
+                      
+                      <div className="flex flex-col justify-center items-center">
+                        <span className="text-xl font-semibold">3</span>
+                        <span className="text-sm text-gray-500">Day Off</span>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              }
 
             </div>
 
